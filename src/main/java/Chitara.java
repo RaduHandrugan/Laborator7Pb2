@@ -11,7 +11,15 @@ public class Chitara extends InstrumentMuzical
         this.nr_corzi = nr_corzi;
     }
 
+    public TipChitara getTipChitara()
+    {
+        return tip_chitara;
+    }
 
+    public int getNrCorzi()
+    {
+        return nr_corzi;
+    }
 
     @Override
     public String toString()

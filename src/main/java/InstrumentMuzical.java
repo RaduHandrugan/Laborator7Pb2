@@ -13,6 +13,16 @@ public abstract class InstrumentMuzical
         this.pret = pret;
     }
 
+    public String getProducator()
+    {
+        return producator;
+    }
+
+    public double getPret()
+    {
+        return pret;
+    }
+
     @Override
     public String toString()
     {
