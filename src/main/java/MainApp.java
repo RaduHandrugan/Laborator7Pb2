@@ -121,15 +121,15 @@ public class MainApp
 
         //9. date chitara cu cel mai mare nr de corzi
         Optional<Chitara> chitaraCuCeleMaiMulteCorzi = instrumente.stream()
-                .filter(instrument -> instrument instanceof Chitara) // Filtrăm doar chitarele
-                .map(instrument -> (Chitara) instrument) // Facem cast la Chitara
-                .max(Comparator.comparingInt(Chitara::getNrCorzi)); // Căutăm chitara cu cel mai mare număr de corzi
+                .filter(instrument -> instrument instanceof Chitara)
+                .map(instrument -> (Chitara) instrument) // cast la chitara
+                .max(Comparator.comparingInt(Chitara::getNrCorzi));
 
         chitaraCuCeleMaiMulteCorzi.ifPresent(chitara -> {
             System.out.println("\nChitara cu cele mai multe corzi este: ");
             System.out.println("Producator: " + chitara.getProducator());
             System.out.println("Pret: " + chitara.getPret());
-            System.out.println("Tip Chitara: " + chitara.getTipChitara());  // Dacă ai o metodă care returnează tipul chitarei
+            System.out.println("Tip Chitara: " + chitara.getTipChitara());
             System.out.println("Numar Corzi: " + chitara.getNrCorzi());
         });
 
